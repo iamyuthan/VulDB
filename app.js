@@ -35,16 +35,7 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
       d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"+"<td>"+(output[i]['vulnerability'])
-      + "</td>" +"<td>" +(output[i]['description'])+"</td>" +"<td>" +(output[i]['impact'])+"</td>"  +"<td>" +(output[i]['likelihood'])+"</td>"+"<td>" +(output[i]['remediation'])+"</td>"+"<td>" +(output[i]['reference'])+"</td>"+"<td>" +(output[i]['severity'])+"</td>"+"<td>" +(output[i]['category'])+"</td>"+"<td>" +(output[i]['rating'])+"</td>"+"<td>" +(output[i]['cvss'])+"</td>"+"<td>" +(output[i]['database'])+"</td>"+"<td>" +(output[i]['source'])+"</td>").on("click", function(d) {
-      "<b>"+[i+1]+"</b>"+"<br>"+"<b>"+(output[i]['vulnerability'])
-      + "</b>" +"<br>"+"<b>"+"Description"+"</b>"+"<br>"+"<i>" +(output[i]['description'])+"</i>" +"<br>"+"<br>"+"<b>"+"Impact"+"</b>"+"<br>"+
-        "<i>" +(output[i]['impact'])+"</i>"  +"<br>"+"<br>"+"<b>"+"Likelihood"+"</b>"+"<br>"+"<i>" +(output[i]['likelihood'])+"<i>"+"<br>"+"<br>"+"<b>"
-        +"Remediation"+"</b>"+"<br>"+"<i>" +(output[i]['remediation'])+"</i>"+"<br>"+"<br>"+"<b>"+"Reference"+"</b>"+"<br>"+
-        "<i>" +(output[i]['reference'])+"</i>"+"<br>"+"<br>"+"<b>"+"Severity"+"</b>"+"<br>"+"<i>" +(output[i]['severity'])+"</i>"+
-        "<br>"+"<br>"+"<b>"+"Category"+"</b>"+"<br>"+"<i>" +(output[i]['category'])+"</i>"+"<br>"+"<br>"+"<b>"+"Rating"+"</b>"+"<br>"+
-        "<i>" +(output[i]['rating'])+"</i>"+"<br>"+"<br>"+"<b>"+"CVSS"+"</b>"+"<br>"+"<i>" +(output[i]['cvss'])+"</i>"+
-        "<br>"+"<br>"+"<b>"+"Database"+"</b>"+"<br>"+"<i>" +(output[i]['database'])+"</i>"+"<br>"+"<br>"+"<b>"+"Source"+"</b>"+"<br>"+
-        "<i>" +(output[i]['source'])+"</i>")
+      + "</td>" +"<td>" +(output[i]['description'])+"</td>" +"<td>" +(output[i]['impact'])+"</td>"  +"<td>" +(output[i]['likelihood'])+"</td>"+"<td>" +(output[i]['remediation'])+"</td>"+"<td>" +(output[i]['reference'])+"</td>"+"<td>" +(output[i]['severity'])+"</td>"+"<td>" +(output[i]['category'])+"</td>"+"<td>" +(output[i]['rating'])+"</td>"+"<td>" +(output[i]['cvss'])+"</td>"+"<td>" +(output[i]['database'])+"</td>"+"<td>" +(output[i]['source'])+"</td>")
       }
   };
   window.resizeTo(screen.width,screen.height)
