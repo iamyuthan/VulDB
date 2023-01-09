@@ -35,8 +35,7 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
       d3.select("tbody").insert("tr").attr("data-toggle","collapse").attr("data-target","#accordion").attr("class","clickable").html("<td>"+[i+1]+"</td>"+"<td>"+(output[i]['vulnerability'])
-      + "</td>"+"<td>" +(output[i]['category'])+"</td>")
-      d3.select("tbody").insert("tr").html("<td colspan="3">"+"<div id="accordion" class="collapse">" +(output[i]['description'])+"<br>" +(output[i]['impact'])+"<br>" +(output[i]['likelihood'])+"<br>" +(output[i]['remediation'])+"<br>" +(output[i]['reference'])+"<br>" +(output[i]['severity'])+"<br>" +(output[i]['rating'])+"<br>" +(output[i]['cvss'])+"<br>" +(output[i]['database'])+"<br>" +(output[i]['source'])+"</div>"+"</td>")
+      + "</td>"+"<td>" +(output[i]['category'])+"</td>").append("tr").html("<td colspan="3">"+"<div id="accordion" class="collapse">" +(output[i]['description'])+"<br>" +(output[i]['impact'])+"<br>" +(output[i]['likelihood'])+"<br>" +(output[i]['remediation'])+"<br>" +(output[i]['reference'])+"<br>" +(output[i]['severity'])+"<br>" +(output[i]['rating'])+"<br>" +(output[i]['cvss'])+"<br>" +(output[i]['database'])+"<br>" +(output[i]['source'])+"</div>"+"</td>")
     }
   };
   window.resizeTo(screen.width,screen.height)
