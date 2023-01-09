@@ -1,5 +1,10 @@
 ,vulnerability,description,impact,likelihood,remediation,reference,severity,category,rating,cvss,database,source
-0,Insecure Direct Object References,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
+0,Insecure Direct Object References,"The <APP NAME> web application fails to perform server-side authorisation checks when directly referencing various objects, allowing unuauthorised access to other users' configuration and report data.
+
+A direct object reference occurs when a reference to an object (such as a file or key) is included as a URL or a parameter and used in an HTTP request by the server to return the relevant data for the requested object. Direct object references used in this way, like all client-side parameters, can be manipulated to access arbitrary objects if verification of a user's privileges is not performed prior to returning the requested object.
+
+The following requests were vulnerable to Insecure Direct Object Reference (IDOR) - this list may not be exhaustive:
+<MENTION THE AFFECTED URL/TARGET>",test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
 1,Insufficient User Access Control,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
 2,Unrestricted File Upload,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
 3,Concurrent Session Allowed,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
