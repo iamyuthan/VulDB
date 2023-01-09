@@ -1,0 +1,7 @@
+,vulnerability,description,impact,likelihood,remediation,reference,severity,category,rating,cvss,database,source
+0,Insecure Direct Object References,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
+1,Insufficient User Access Control,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
+2,Unrestricted File Upload,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
+3,Concurrent Session Allowed,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
+4,HTML Injection,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
+5,Improper Session Termination,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11
