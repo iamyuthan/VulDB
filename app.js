@@ -39,8 +39,8 @@ d3.csv("vuldb.csv").then(function (data) {
 	  
 	  +"<div id=\"collapse"+[i+1]+"\" class=\"accordion-collapse collapse\" aria-labelledby=\"heading"+[i+1]+"\" data-bs-parent=\"#accordionExample\"  style=\"text-align:left;\">"
       +"<div class=\"accordion-body\">"
-	  +"<strong>Description:</strong>"+"<br>"
-	  +(output[i]['description'])+"<br>"+"<br>"
+	  +"<strong>Description:</strong>"+"<br>"+"<span>"+
+	  +(output[i]['description'])+"</span>"+"<br>"+"<br>"
 	  +"<strong>Impact:</strong>"+"<br>"
 	  +(output[i]['impact'])+"<br>"+"<br>"
 	  +"<strong>Likelihood:</strong>"+"<br>"
