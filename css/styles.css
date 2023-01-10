@@ -235,7 +235,8 @@ svg {
 }
 
 table {
-  border-collapse: collapse;
+  border-collapse: separate; /* You can exclude this line, this is the default */
+  border-spacing: 14px;
 }
 
 caption {
@@ -249,6 +250,10 @@ caption {
 th {
   text-align: inherit;
   text-align: -webkit-match-parent;
+}
+
+td {
+  padding: 20px;
 }
 
 label {
