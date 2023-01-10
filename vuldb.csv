@@ -1,5 +1,5 @@
 ,vulnerability,description,impact,likelihood,remediation,reference,severity,category,rating,cvss,database,source
-0,Insecure Direct Object References,"The <APP NAME> web application fails to perform server-side authorisation checks when directly referencing various objects, allowing unuauthorised access to other users' configuration and report data.
+0,Insecure Direct Object References,"The APP NAME web application fails to perform server-side authorisation checks when directly referencing various objects, allowing unuauthorised access to other users' configuration and report data.
 
 A direct object reference occurs when a reference to an object (such as a file or key) is included as a URL or a parameter and used in an HTTP request by the server to return the relevant data for the requested object. Direct object references used in this way, like all client-side parameters, can be manipulated to access arbitrary objects if verification of a user's privileges is not performed prior to returning the requested object.
 
