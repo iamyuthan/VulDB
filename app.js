@@ -34,8 +34,31 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
-      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"+<td class=\"accordion-header\" id=\"heading"+[i+1]+"\">"+"<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse"+[i+1]+"\" aria-expanded=\"false\" aria-controls=\"collapse"+[i+1]+"\">"+(output[i]['vulnerability'])+"</button>"
-      + "</td>" +"<td>" +(output[i]['description'])+"</td>" +"<td>" +(output[i]['impact'])+"</td>"  +"<td>" +(output[i]['likelihood'])+"</td>"+"<td>" +(output[i]['remediation'])+"</td>"+"<td>" +(output[i]['reference'])+"</td>"+"<td>" +(output[i]['severity'])+"</td>"+"<td>" +(output[i]['category'])+"</td>"+"<td>" +(output[i]['rating'])+"</td>"+"<td>" +(output[i]['cvss'])+"</td>"+"<td>" +(output[i]['database'])+"</td>"+"<td>" +(output[i]['source'])+"</td>")
+      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"+"<td class=\"accordion-header\" id=\"heading"+[i+1]+"\">"+"<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse"+[i+1]+"\" aria-expanded=\"false\" aria-controls=\"collapse"+[i+1]+"\">"+(output[i]['vulnerability'])+"</button>"
+      + "</td>" +"<td>" +(output[i]['category'])+"</td>"+"<td>" 
+	  
+	  +"<div id=\"collapse"+[i+1]+"\" class=\"accordion-collapse collapse\" aria-labelledby=\"heading"+[i+1]+"\" data-bs-parent=\"#accordionExample\"  style=\"text-align:left;\">"
+      +"<div class=\"accordion-body\">"
+	  +"<strong>Description:</strong>"+"<br>"
+	  +(output[i]['description'])+"<br>"+"<br>"
+	  +"<strong>Impact:</strong>"+"<br>"
+	  +(output[i]['impact'])+"<br>"+"<br>"
+	  +"<strong>Likelihood:</strong>"+"<br>"
+	  +(output[i]['likelihood'])+"<br>"+"<br>"
+	  +"<strong>Remediation:</strong>"+"<br>"
+	  +(output[i]['remediation'])+"<br>"+"<br>"
+	  +"<strong>Reference:</strong>"+"<br>"
+	  +(output[i]['reference'])+"<br>"+"<br>"
+	  +"<strong>Severity:</strong>"+"<br>"
+	  +(output[i]['severity'])+"<br>"+"<br>"
+	  +"<strong>Rating:</strong>"+"<br>"
+	  +(output[i]['rating'])+"<br>"+"<br>"
+	  +"<strong>CVSS:</strong>"+"<br>"
+	  +(output[i]['cvss'])+"<br>"+"<br>"
+	  +"<strong>Database:</strong>"+"<br>"
+	  +(output[i]['database'])+"<br>"+"<br>"
+	  +"<strong>Source:</strong>"+"<br>"
+	  +(output[i]['source'])+"<br>"+"<br>"+"</div>"+"</div>")
     }  };
   window.resizeTo(screen.width,screen.height)
 
