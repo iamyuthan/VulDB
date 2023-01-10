@@ -34,8 +34,9 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
-      d3.select("tbody").insert("tr").append("div").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"+"<td>"+(output[i]['vulnerability'])
-      + "</td>" +"<td>" +(output[i]['description'])+"</td>" +"<td>" +(output[i]['impact'])+"</td>"  +"<td>" +(output[i]['likelihood'])+"</td>"+"<td>" +(output[i]['remediation'])+"</td>"+"<td>" +(output[i]['reference'])+"</td>"+"<td>" +(output[i]['severity'])+"</td>"+"<td>" +(output[i]['category'])+"</td>"+"<td>" +(output[i]['rating'])+"</td>"+"<td>" +(output[i]['cvss'])+"</td>"+"<td>" +(output[i]['database'])+"</td>"+"<td>" +(output[i]['source'])+"</td>") }  };
+      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td class=\"accordion-header\" id=\"heading"+[i+1]+"\">"+[i+1]+"</td>"+"<td>"+(output[i]['vulnerability'])
+      + "</td>" +"<td>" +(output[i]['description'])+"</td>" +"<td>" +(output[i]['impact'])+"</td>"  +"<td>" +(output[i]['likelihood'])+"</td>"+"<td>" +(output[i]['remediation'])+"</td>"+"<td>" +(output[i]['reference'])+"</td>"+"<td>" +(output[i]['severity'])+"</td>"+"<td>" +(output[i]['category'])+"</td>"+"<td>" +(output[i]['rating'])+"</td>"+"<td>" +(output[i]['cvss'])+"</td>"+"<td>" +(output[i]['database'])+"</td>"+"<td>" +(output[i]['source'])+"</td>")
+    }  };
   window.resizeTo(screen.width,screen.height)
 
 
