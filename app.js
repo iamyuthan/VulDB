@@ -58,7 +58,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	  +"<strong>Database:</strong>"+"<br>"
 	  +(output[i]['database'])+"<br>"+"<br>"
 	  +"<strong>Source:</strong>"+"<br>"
-	  +(output[i]['source'])+"<br>"+"<br>"+"</div>"+"</div>")
+	  +(output[i]['source'])+"<br>"+"<br>"+"</div>"+"</div>"+"</td>")
     }  };
   window.resizeTo(screen.width,screen.height)
 
