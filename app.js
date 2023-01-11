@@ -37,8 +37,8 @@ d3.csv("vuldb.csv").then(function (data) {
       d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
-									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#"
-									  +[i+1]+"ModalFullscreen\">"+(output[i]['vulnerability'])
+									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalFullscreen"
+									  +[i+1]+"\">"+(output[i]['vulnerability'])
 									  +"</button>"
 									  +"</div>"
 									  +"</td>"
@@ -46,12 +46,12 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<td>" +(output[i]['severity'])+"</td>"
 									  +"<td>" +(output[i]['database'])+"</td>"
 									  +"<td>" +(output[i]['source'])+"</td>"
-									  +"<div id=\""+[i+1]+"ModalFullscreen\" class=\"modal fade\" aria-labelledby=\""+[i+1]
-									  +"ModalFullscreenLabel\" aria-hidden=\"true\">"
+									  +"<div id=\"ModalFullscreen"+[i+1]+"\" class=\"modal fade\" aria-labelledby=\"ModalFullscreenLabel"
+									  +[i+1]+"\" aria-hidden=\"true\">"
 									  +"<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">"
 									  +"<div class=\"modal-content\">"
 									  +"<div class=\"modal-header\">"
-									  +"<h5 class=\"modal-title h4\" id=\""+[i+1]+"ModalFullscreenLabel\">"+(output[i]['vulnerability'])
+									  +"<h5 class=\"modal-title h4\" id=\"ModalFullscreenLabel"+[i+1]+"\">"+(output[i]['vulnerability'])
 									  +"</h5>"
 									  +"</div>"
 									  +"<div class=\"modal-body\">"
