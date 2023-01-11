@@ -74,3 +74,5 @@ d3.csv("vuldb.csv").then(function (data) {
     }  };
   window.resizeTo(screen.width,screen.height)
 
+
+});
