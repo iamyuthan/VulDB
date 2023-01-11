@@ -37,7 +37,7 @@ d3.csv("vuldb.csv").then(function (data) {
       d3.select("tbody").insert("tr").attr("class","bd-example").html("<td>"+[i+1]+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
-									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#"
+									  +"<button class=\"accordion-button btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#"
 									  +[i+1]+"ModalFullscreen\">"+(output[i]['vulnerability'])
 									  +"</button>"
 									  +"</div>"
