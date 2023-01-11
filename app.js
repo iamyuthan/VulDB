@@ -52,7 +52,6 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<h5 class=\"modal-title h4\" id=\"ModalFullscreenLabel"+[i+1]+"\">"+(output[i]['vulnerability'])
 									  +"</h5>"
 									  +"</div>"
-									  +"</div>"
 									  +"<div class=\"modal-body\">"
 									  +"<p><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
 	      +"<p><em><u><strong>Impact:</strong></u></em>"+"<br>"+(output[i]['impact'])+"</p>"
@@ -75,5 +74,3 @@ d3.csv("vuldb.csv").then(function (data) {
     }  };
   window.resizeTo(screen.width,screen.height)
 
-
-});
