@@ -34,10 +34,10 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
-      d3.select("tbody").insert("tr").attr("class","bd-example").html("<td>"+[i+1]+"</td>"
+      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
-									  +"<button class=\"accordion-button btn-primary collapsed\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#"
+									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#"
 									  +[i+1]+"ModalFullscreen\">"+(output[i]['vulnerability'])
 									  +"</button>"
 									  +"</div>"
@@ -46,13 +46,14 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<td>" +(output[i]['severity'])+"</td>"
 									  +"<td>" +(output[i]['database'])+"</td>"
 									  +"<td>" +(output[i]['source'])+"</td>"
-								          +"<div id=\""+[i+1]+"ModalFullscreen\" class=\"modal fade\" aria-labelledby=\""+[i+1]
+									  +"<div id=\""+[i+1]+"ModalFullscreen\" class=\"modal fade\" aria-labelledby=\""+[i+1]
 									  +"ModalFullscreenLabel\" aria-hidden=\"true\">"
 									  +"<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">"
 									  +"<div class=\"modal-content\">"
 									  +"<div class=\"modal-header\">"
 									  +"<h5 class=\"modal-title h4\" id=\""+[i+1]+"ModalFullscreenLabel\">"+(output[i]['vulnerability'])
-									  +"</h5>"
+									  +"</h5>"+
+									  "<button type=\"button\" class=\"btn-close\" data-bs-dismiss="modal" aria-label=\"Close\"></button>"
 									  +"</div>"
 									  +"<div class=\"modal-body\">"
 									  +"<p><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
@@ -65,6 +66,9 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+(output[i]['cvss'])+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
+	      +"</div>"
+	      +"<div class=\"modal-footer\">"
+	      +"<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>"
 	      +"</div>"
 	      +"</div>"
 	      +"</div>"
