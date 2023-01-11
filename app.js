@@ -34,7 +34,7 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
-      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"
+      d3.select("tbody").insert("tr").attr("class","bd-example").html("<td>"+[i+1]+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
 									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#"
