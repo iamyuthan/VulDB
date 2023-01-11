@@ -44,7 +44,6 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<td>" +(output[i]['severity'])+"</td>"
 									  +"<td>" +(output[i]['database'])+"</td>"
 									  +"<td>" +(output[i]['source'])+"</td>"
-									  +"<td>"
 									  +"<div id=\""+[i+1]+"ModalFullscreen\" class=\"modal fade\" aria-labelledby=\""+[i+1]
 									  +"ModalFullscreenLabel\" aria-hidden=\"true\">"
 									  +"<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">"
@@ -71,8 +70,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"</div>"
 	      +"</div>"
 	      +"</div>"
-	      +"</div>"
-	      +"</td>")
+	      +"</div>")
     }  };
   window.resizeTo(screen.width,screen.height)
 
