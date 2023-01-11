@@ -35,6 +35,32 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
       d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"
++"<td class=\"accordion-header\" id=\"heading"+[i+1]+"\">"
++"<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse"
++[i+1]+"\" aria-expanded=\"false\" aria-controls=\"collapse"+[i+1]+"\">"+(output[i]['vulnerability'])
++"</button>"
++ "</td>"
++"<td>"+(output[i]['category'])+"</td>"
++"<td>"
++"<div id=\"collapse"+[i+1]+"\" class=\"accordion-collapse collapse\" aria-labelledby=\"heading"
++[i+1]+"\" data-bs-parent=\"#accordionExample\"  style=\"text-align:left;\">"
++"<div class=\"accordion-body\">"
++"<p><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
++"<p><em><u><strong>Impact:</strong></u></em>"+"<br>"+(output[i]['impact'])+"</p>"
++"<p><em><u><strong>Likelihood:</strong></u></em>"+"<br>"+(output[i]['likelihood'])+"</p>"
++"<p><em><u><strong>Remediation:</strong></u></em>"+"<br>"+(output[i]['remediation'])+"</p>"
++"<p><em><u><strong>Reference:</strong></u></em>"+"<br>"+(output[i]['reference'])+"</p>"
++"<p><em><u><strong>Severity:</strong></u></em>"+"<br>"+(output[i]['severity'])+"</p>"
++"<p><em><u><strong>Rating:</strong></u></em>"+"<br>"+(output[i]['rating'])+"</p>"
++"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+(output[i]['cvss'])+"</p>"
++"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
++"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
++"</div>"
++"</div>"
++"</td>")
+	  
+	  
+	  d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
 									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#"
@@ -52,7 +78,8 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<div class=\"modal-content\">"
 									  +"<div class=\"modal-header\">"
 									  +"<h5 class=\"modal-title h4\" id=\""+[i+1]+"ModalFullscreenLabel\">"+(output[i]['vulnerability'])
-									  +"</h5>"
+									  +"</h5>"+
+									  "<button type=\"button\" class=\"btn-close\" data-bs-dismiss="modal" aria-label=\"Close\"></button>"
 									  +"</div>"
 									  +"<div class=\"modal-body\">"
 									  +"<p><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
