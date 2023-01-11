@@ -52,8 +52,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<div class=\"modal-content\">"
 									  +"<div class=\"modal-header\">"
 									  +"<h5 class=\"modal-title h4\" id=\""+[i+1]+"ModalFullscreenLabel\">"+(output[i]['vulnerability'])
-									  +"</h5>"+
-									  "<button type=\"button\" class=\"btn-close\" data-bs-dismiss="modal" aria-label=\"Close\"></button>"
+									  +"</h5>"
 									  +"</div>"
 									  +"<div class=\"modal-body\">"
 									  +"<p><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
