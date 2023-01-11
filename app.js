@@ -34,7 +34,7 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
-      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"
+      d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
 									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalFullscreen"
@@ -51,6 +51,8 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<div class=\"modal-header\">"
 									  +"<h5 class=\"modal-title h4\" id=\"ModalFullscreenLabel"+[i+1]+"\">"+(output[i]['vulnerability'])
 									  +"</h5>"
+					   				  +"<button type=\"button\" class=\"btn-close\" data-bs-dismiss="modal" aria-label=\"Close\"></button>"
+									  +"</div>"
 									  +"</div>"
 									  +"<div class=\"modal-body\">"
 									  +"<p><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
