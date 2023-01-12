@@ -9778,7 +9778,7 @@ iframe {
 }
 
 .sevstatus[data-status="critical"] {
- color : firebrick;
+ background : firebrick;
 }
 
 .sevstatus[data-status="high"] {
@@ -9786,29 +9786,38 @@ iframe {
 }
 
 .sevstatus[data-status="medium"] {
- color : gold;
+ background : gold;
 }
 
 .sevstatus[data-status="low"] {
- color : forestgreen;
+ background : forestgreen;
 }
 
 .sevstatus[data-status="info"] {
+ background : dodgerblue;
+}
+
+
+.sevstatus[data-status="txtcritical"] {
+ color : firebrick;
+}
+
+.sevstatus[data-status="txthigh"] {
+ color : crimson;
+}
+
+.sevstatus[data-status="txtmedium"] {
+ color : gold;
+}
+
+.sevstatus[data-status="txtlow"] {
+ color : forestgreen;
+}
+
+.sevstatus[data-status="txtinfo"] {
  color : dodgerblue;
 }
 
-.sevstatus[data-status=""]:empty {
- background : grey;
-}
-
-.sevstatus {
- background : grey;
-}
-
-.vulbtn{
-  font-size: 25px;
-  background: #0b5ed7;
-}
 
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
