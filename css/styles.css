@@ -9801,7 +9801,7 @@ iframe {
  background : grey;
 }
 
-.sevstatus[data-status=""] {
+.sevstatus {
  background : grey;
 }
 
