@@ -9777,6 +9777,14 @@ iframe {
 
 }
 
+.status[data-status="high"] {
+ color : red
+}
+
+.status[data-status=""]:empty {
+ color : blue
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   position: fixed;
