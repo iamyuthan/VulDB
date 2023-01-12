@@ -9778,11 +9778,11 @@ iframe {
 }
 
 .status[data-status="high"] {
- color : red
+ color : red;
 }
 
 .status[data-status=""]:empty {
- color : blue
+ color : blue;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
