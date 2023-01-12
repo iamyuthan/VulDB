@@ -9782,7 +9782,7 @@ iframe {
 }
 
 .sevstatus[data-status="high"] {
- color : crimson;
+ background : crimson;
 }
 
 .sevstatus[data-status="medium"] {
