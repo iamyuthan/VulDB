@@ -45,6 +45,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"</td>"
 									  +"<td>"+"<strong>" +(output[i]['category'])+"</strong>"+"</td>"
 									  +"<td data-status=\""+sevValue+"\" class=\"sevstatus\">"+"<strong>" +(output[i]['severity'])+"</strong>"+"</td>"
+									  +"<td>"+"<strong>" +(output[i]['database'])+"</strong>"+"</td>"
 									  +"<td>"+"<strong>" +(output[i]['source'])+"</strong>"+"</td>"
 									  +"<div id=\"ModalFullscreen"+[i+1]+"\" class=\"modal fade\" aria-labelledby=\"ModalFullscreenLabel"
 									  +[i+1]+"\" aria-hidden=\"true\">"
