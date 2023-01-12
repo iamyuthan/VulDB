@@ -50,7 +50,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">"
 									  +"<div class=\"modal-content\">"
 									  +"<div class=\"modal-header\">"
-									  +"<h5 class=\"modal-title h4 sevstatus\" data-status=\""+sevValue+" id=\"ModalFullscreenLabel"+[i+1]+"\">"+(output[i]['vulnerability'])
+									  +"<h5 class=\"modal-title h4 sevstatus\" data-status=\""+sevValue+"\" id=\"ModalFullscreenLabel"+[i+1]+"\">"+(output[i]['vulnerability'])
 									  +"</h5>"
 									  +"</div>"
 									  +"<div class=\"modal-body\">"
@@ -59,8 +59,8 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>Likelihood:</strong></u></em>"+"<br>"+(output[i]['likelihood'])+"</p>"
 	      +"<p><em><u><strong>Remediation:</strong></u></em>"+"<br>"+(output[i]['remediation'])+"</p>"
 	      +"<p><em><u><strong>Reference:</strong></u></em>"+"<br>"+(output[i]['reference'])+"</p>"
-	      +"<p><em><u><strong>Severity:</strong></u></em>"+"<br>"+(output[i]['severity'])+"</p>"
-	      +"<p><em><u><strong>Rating:</strong></u></em>"+"<br>"+"<p data-status=\""+sevValue+" class=\"sevstatus\">"+(output[i]['rating'])+"</p>"+"</p>"
+	      +"<p><em><u><strong>Severity:</strong></u></em>"+"<br>"+"<p data-status=\""+sevValue+"\" class=\"sevstatus\">"+(output[i]['severity'])+"</p>"+"</p>"
+	      +"<p><em><u><strong>Rating:</strong></u></em>"+"<br>"+(output[i]['rating'])+"</p>"
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+(output[i]['cvss'])+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
