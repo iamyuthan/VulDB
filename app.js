@@ -35,6 +35,8 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
 	var sevValue = (output[i]['severity']).toLowerCase().trim();
+	    var myString = (output[i]['cvss']);
+	    myString = myString.replace(/^\(+|\)+$/g, '');
       d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+"<strong>"+[i+1]+"</strong>"+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
@@ -63,7 +65,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>Reference:</strong></u></em>"+"<br>"+(output[i]['reference'])+"</p>"
 	      +"<p><em><u><strong>Severity:</strong></u></em>"+"<br>"+"<p data-status=\""+sevValue+"\" class=\"sevstatus\">"+"<strong>"+(output[i]['severity'])+"</strong>"+"</p>"+"</p>"
 	      +"<p><em><u><strong>Rating:</strong></u></em>"+"<br>"+(output[i]['rating'])+"</p>"
-	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+(output[i]['cvss'])+"</p>"
+	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+"<a href=\"https://www.first.org/cvss/calculator/3.1#"+myString+"\">"+myString+"</a>"+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
 	      +"</div>"
