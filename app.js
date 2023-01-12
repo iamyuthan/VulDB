@@ -35,7 +35,7 @@ d3.csv("vuldb.csv").then(function (data) {
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
 	var sevValue = (output[i]['severity']).toLowerCase().trim();
-      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+[i+1]+"</td>"
+      d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+"<strong>"+[i+1]+"</strong>"+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
 									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalFullscreen"
@@ -43,9 +43,9 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"</button>"
 									  +"</div>"
 									  +"</td>"
-									  +"<td>" +(output[i]['category'])+"</td>"
-									  +"<td data-status=\""+sevValue+"\" class=\"sevstatus\">" +(output[i]['severity'])+"</td>"
-									  +"<td>" +(output[i]['source'])+"</td>"
+									  +"<td>"+"<strong>" +(output[i]['category'])+"</strong>"+"</td>"
+									  +"<td data-status=\""+sevValue+"\" class=\"sevstatus\">"+"<strong>" +(output[i]['severity'])+"</strong>"+"</td>"
+									  +"<td>"+"<strong>" +(output[i]['source'])+"</strong>"+"</td>"
 									  +"<div id=\"ModalFullscreen"+[i+1]+"\" class=\"modal fade\" aria-labelledby=\"ModalFullscreenLabel"
 									  +[i+1]+"\" aria-hidden=\"true\">"
 									  +"<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\">"
