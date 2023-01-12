@@ -9777,12 +9777,28 @@ iframe {
 
 }
 
+.sevstatus[data-status="critical"] {
+ color : firebrick;
+}
+
 .sevstatus[data-status="high"] {
- color : red;
+ color : crimson;
+}
+
+.sevstatus[data-status="medium"] {
+ color : gold;
+}
+
+.sevstatus[data-status="low"] {
+ color : forestgreen;
+}
+
+.sevstatus[data-status="info"] {
+ color : dodgerblue;
 }
 
 .sevstatus[data-status=""]:empty {
- color : blue;
+ background : grey;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
