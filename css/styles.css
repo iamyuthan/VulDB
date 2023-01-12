@@ -9801,6 +9801,11 @@ iframe {
  background : grey;
 }
 
+.vulbtn{
+  font-size: 25px;
+  background: #0b5ed7;
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   position: fixed;
