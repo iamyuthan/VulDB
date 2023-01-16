@@ -37,6 +37,8 @@ d3.csv("vuldb.csv").then(function (data) {
 	var sevValue = (output[i]['severity']).toLowerCase().trim();
 	    var myString = (output[i]['cvss']);
 	    myString = myString.replace(/^\(+|\)+$/g, '');
+	    var jsonData = d3.json("https://api.cvesearch.com/search?q=\""+(output[i]['vulnerability'])+"\"");
+		var jdata = JSON.parse(jsonData);	    
       d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+"<strong>"+[i+1]+"</strong>"+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
@@ -68,6 +70,14 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+"<a href=\"https://www.first.org/cvss/calculator/3.1#"+myString+"\">"+myString+"</a>"+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
+									  +"<div class=\"smaller\" style=\"background-color:#e0dbd2; padding:3px; border:1px solid #706c60; margin-bottom:10px\">There are "
+									  +"<b>${jdata["meta"]["count"]}</b> CVE Records that match your search.</div>"
+									  +"<div><table id=\"TableWithRules\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">"
+									  +"<thead><tr><th style=\"padding:3px\" valign=\"top\">Name</th>"
+									  +"<th style=\"padding:3px\" valign=\"top\">Description</th></tr></thead>"
+									  +"<tbody>"
+									  +"</tbody></table>"
+									  +"</div>"
 	      +"</div>"
 	      +"<div class=\"modal-footer\">"
 	      +"<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>"
@@ -76,6 +86,15 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"</div>"
 	      +"</div>"
 	    )
+	    d3.json("https://api.cvesearch.com/search?q=\""+(output[i]['vulnerability'])+"\"").then(function(data){
+		    var jsonData = data;
+  var jdata = JSON.parse(jsonData);
+  for (key in jdata.response) {
+	var jtr = key
+	var jzr = `${jtr}`
+    var jtr = `<tr><td valign="top" nowrap="nowrap"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-${jtr}">${jtr}</a></td><td valign="top">${jdata["response"][jzr]["basic"]["description"]}</td></tr>`;
+    document.querySelector('#TableWithRules tbody').insertAdjacentHTML('beforeend', jtr);
+}
     }  };
   window.resizeTo(screen.width,screen.height)
 
