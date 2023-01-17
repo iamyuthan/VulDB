@@ -104,7 +104,24 @@
   <script src="js/sidebars.js"></script>
   <script src="js/dashboard.js"></script>
   <script src="js/coming-soon.min.js"></script>
+  <script>
+ 
+document.getElementById('loadjson').addEventListener('click', function(e) {
   
+e.preventDefault();
+var label = document.getElementById('txtvalue').innerHTML
+var jsonData = new XMLHttpRequest();
+jsonData.open("GET", "https://api.cvesearch.com/search?q="+label, false);
+jsonData.send(null);
+  var jdata = JSON.parse(jsonData.responseText);
+  for (key in jdata.response) {
+	var jtr = key
+	var jzr = `${jtr}`
+    var jtr = `<tr><td valign="top" nowrap="nowrap"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-${jtr}">${jtr}</a></td><td valign="top">${jdata["response"][jzr]["basic"]["description"]}</td></tr>`;
+    document.querySelector('#TableWithRules tbody').insertAdjacentHTML('beforeend', jtr);
+}
+});
+</script>
 
 
 </body>
