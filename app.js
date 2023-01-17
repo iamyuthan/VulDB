@@ -36,7 +36,9 @@ d3.csv("vuldb.csv").then(function (data) {
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
 	var sevValue = (output[i]['severity']).toLowerCase().trim();
 	    var myString = (output[i]['cvss']);
-	    myString = myString.replace(/^\(+|\)+$/g, '');	    
+	    myString = myString.replace(/^\(+|\)+$/g, '');	
+	    var inputElements = d3.select("#cve-input");
+    var inputValues = inputElements.property("value").toLowerCase().trim();
       d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+"<strong>"+[i+1]+"</strong>"+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
@@ -58,7 +60,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"</h5>"
 									  +"</div>"
 									  +"<div class=\"modal-body\">"
-									  +"<p id=\"txtvalue\"><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
+									  +"<p><em><u><strong>Description:</strong></u></em>"+"<br>"+(output[i]['description'])+"</p>"
 	      +"<p><em><u><strong>Impact:</strong></u></em>"+"<br>"+(output[i]['impact'])+"</p>"
 	      +"<p><em><u><strong>Likelihood:</strong></u></em>"+"<br>"+(output[i]['likelihood'])+"</p>"
 	      +"<p><em><u><strong>Remediation:</strong></u></em>"+"<br>"+(output[i]['remediation'])+"</p>"
@@ -68,6 +70,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+"<a href=\"https://www.first.org/cvss/calculator/3.1#"+myString+"\">"+myString+"</a>"+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
+									  +"<input autocomplete='off' type='text' class='form-control' id='cve-input' placeholder='Enter vulnerability for finding CVE' value='"+(output[i]['vulnerability'])+" onkeypress=\"this.style.width = ((this.value.length + 1) * 8) + 'px';\"'>"
 									  +"<button class='btn btn-primary' id='loadjson' onclick='loadCVE()'>Load CVE</button>"
 									  +"<div id='popupmodaltable'>"
 									  +"</div>"
@@ -80,7 +83,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"</div>"
 									  +"<script>document.getElementById('loadjson').addEventListener('click', function(e) {"
 +"e.preventDefault();"
-+"var label = document.getElementById('txtvalue').innerHTML"
++"var label = "+inputValues
 +"var jsonData = new XMLHttpRequest();"
 +"jsonData.open(\"GET\", \"https://api.cvesearch.com/search?q=\"+label, false);"
 +"jsonData.send(null);"
