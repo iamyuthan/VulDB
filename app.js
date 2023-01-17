@@ -40,7 +40,7 @@ d3.csv("vuldb.csv").then(function (data) {
       d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+"<strong>"+[i+1]+"</strong>"+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
-									  +"<button class=\"btn btn-primary\" id=\"loadjson\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalFullscreen"
+									  +"<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"modal\" data-bs-target=\"#ModalFullscreen"
 									  +[i+1]+"\">"+(output[i]['vulnerability'])
 									  +"</button>"
 									  +"</div>"
@@ -68,11 +68,8 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+"<a href=\"https://www.first.org/cvss/calculator/3.1#"+myString+"\">"+myString+"</a>"+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
-									  +"<div><table id=\"TableWithRules\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">"
-									  +"<thead><tr><th style=\"padding:3px\" valign=\"top\">Name</th>"
-									  +"<th style=\"padding:3px\" valign=\"top\">Description</th></tr></thead>"
-									  +"<tbody>"
-									  +"</tbody></table>"
+									  +"<button class='btn btn-primary' id='loadjson'>Load CVE</button>"
+									  +"<div id='popupmodaltable'>
 									  +"</div>"
 	      +"</div>"
 	      +"<div class=\"modal-footer\">"
