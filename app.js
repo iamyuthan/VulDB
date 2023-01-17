@@ -98,7 +98,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	 
 
 document.getElementById('loadjson').addEventListener('click', function(e) {
-  
+  console.log('test');
 e.preventDefault();
 var label = document.getElementById('txtvalue').innerHTML
 var jsonData = new XMLHttpRequest();
@@ -118,9 +118,6 @@ jsonData.send(null);
 });
   window.resizeTo(screen.width,screen.height)
 
-fuction loadCVE() { 
-	console.log('its working');
-}
 });
 
 
