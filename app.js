@@ -36,9 +36,7 @@ d3.csv("vuldb.csv").then(function (data) {
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
 	var sevValue = (output[i]['severity']).toLowerCase().trim();
 	    var myString = (output[i]['cvss']);
-	    myString = myString.replace(/^\(+|\)+$/g, '');
-	    var jsonData = d3.json("https://api.cvesearch.com/search?q=\""+(output[i]['vulnerability'])+"\"");
-		var jdata = JSON.parse(jsonData);	    
+	    myString = myString.replace(/^\(+|\)+$/g, '');	    
       d3.select("tbody").insert("tr").attr("class","accordion-item").html("<td>"+"<strong>"+[i+1]+"</strong>"+"</td>"
 									  +"<td>"
 									  +"<div class=\"d-flex justify-content-between flex-wrap\">"
@@ -70,8 +68,6 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+"<a href=\"https://www.first.org/cvss/calculator/3.1#"+myString+"\">"+myString+"</a>"+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
-									  +"<div class=\"smaller\" style=\"background-color:#e0dbd2; padding:3px; border:1px solid #706c60; margin-bottom:10px\">There are "
-									  +"<b>"+jdata["meta"]["count"]+"</b> CVE Records that match your search.</div>"
 									  +"<div><table id=\"TableWithRules\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">"
 									  +"<thead><tr><th style=\"padding:3px\" valign=\"top\">Name</th>"
 									  +"<th style=\"padding:3px\" valign=\"top\">Description</th></tr></thead>"
