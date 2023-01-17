@@ -69,7 +69,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
 									  +"<button class='btn btn-primary' id='loadjson'>Load CVE</button>"
-									  +"<div id='popupmodaltable'>
+									  +"<div id='popupmodaltable'>"
 									  +"</div>"
 	      +"</div>"
 	      +"<div class=\"modal-footer\">"
