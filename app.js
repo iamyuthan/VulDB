@@ -73,7 +73,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<div id='popupmodaltable"+[i+1]+"'>"
 									  +"</div>"
 									  +"<script>"
-									  +"function loadCVE"+[i+1]+" () {"
+									  +"function loadCVE"+[i+1]+"() {"
 									  +"var label = document.getElementById('cve-input"+[i+1]+"').getAttribute('value');"
 +"var jsonData = new XMLHttpRequest();"
 +"jsonData.open(\"GET\", \"https://api.cvesearch.com/search?q=\"+label, false);"
