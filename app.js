@@ -86,17 +86,8 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"</div>"
 	      +"</div>"
 	    )
-	    d3.json("https://api.cvesearch.com/search?q=\""+(output[i]['vulnerability'])+"\"").then(function(data){
-		    var jsonData = data;
-  var jdata = JSON.parse(jsonData);
-  for (key in jdata.response) {
-	var jtr = key
-	var jzr = `${jtr}`
-    var jtr = `<tr><td valign="top" nowrap="nowrap"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-${jtr}">${jtr}</a></td><td valign="top">${jdata["response"][jzr]["basic"]["description"]}</td></tr>`;
-    document.querySelector('#TableWithRules tbody').insertAdjacentHTML('beforeend', jtr);
-}
-	    }
-    }  };
+	    
+  };
   window.resizeTo(screen.width,screen.height)
 
 
