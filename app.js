@@ -74,7 +74,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"</div>"
 									  +"<script>"
 									  +"function loadCVE"+[i+1]+" () {"
-									  +"document.getElementById('loadjson"+[i+1]+"').addEventListener('click', function(e) {"
+									  +"document.getElementById('loadjson"+[i+1]+"').onclick = function(e) {"
 +"e.preventDefault();"
 +"var label = document.getElementById('cve-input"+[i+1]+"').getAttribute('value');"
 +"var jsonData = new XMLHttpRequest();"
