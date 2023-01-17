@@ -111,7 +111,7 @@
 document.getElementById('loadjson').addEventListener('click', function(e) {
   
 e.preventDefault();
-var label = document.getElementById('txtvalue').innerHTML
+var label = document.getElementById('cve-input').getAttribute('value');
 var jsonData = new XMLHttpRequest();
 jsonData.open("GET", "https://api.cvesearch.com/search?q="+label, false);
 jsonData.send(null);
