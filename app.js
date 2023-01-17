@@ -68,7 +68,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+"<a href=\"https://www.first.org/cvss/calculator/3.1#"+myString+"\">"+myString+"</a>"+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
-									  +"<input autocomplete='off' type='text' class='form-control' id='cve-input' placeholder='Enter vulnerability for finding CVE' value='"+(output[i]['vulnerability'])+" onkeypress=\"this.style.width = ((this.value.length + 1) * 8) + 'px';\"'>"
+									  +"<input autocomplete='off' type='text' class='form-control' id='cve-input' placeholder='Enter vulnerability for finding CVE' value='"+(output[i]['vulnerability'])+"' onkeypress=\"this.style.width = ((this.value.length + 1) * 8) + 'px';\"'>"
 									  +"<button class='btn btn-primary' id='loadjson' onclick='loadCVE()'>Load CVE</button>"
 									  +"<div id='popupmodaltable'>"
 									  +"</div>"
