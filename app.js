@@ -87,7 +87,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"</div>"
 	    )
 	    
-  };
+  }  };
   window.resizeTo(screen.width,screen.height)
 
 
