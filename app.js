@@ -68,7 +68,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>CVSS:</strong></u></em>"+"<br>"+"<a href=\"https://www.first.org/cvss/calculator/3.1#"+myString+"\">"+myString+"</a>"+"</p>"
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
-									  +"<button class='btn btn-primary' id='loadjson'>Load CVE</button>"
+									  +"<button class='btn btn-primary' id='loadjson' onclick='loadCVE()'>Load CVE</button>"
 									  +"<div id='popupmodaltable'>"
 									  +"</div>"
 	      +"</div>"
@@ -99,3 +99,7 @@ d3.csv("vuldb.csv").then(function (data) {
 
 
 });
+
+fuction loadCVE() { 
+	console.log('its working');
+}
