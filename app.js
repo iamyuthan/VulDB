@@ -95,11 +95,32 @@ d3.csv("vuldb.csv").then(function (data) {
 	    )
 	    
   }  };
-  window.resizeTo(screen.width,screen.height)
+	 
 
-
+document.getElementById('loadjson').addEventListener('click', function(e) {
+  
+e.preventDefault();
+var label = document.getElementById('txtvalue').innerHTML
+var jsonData = new XMLHttpRequest();
+jsonData.open("GET", "https://api.cvesearch.com/search?q="+label, false);
+jsonData.send(null);
+  var jdata = JSON.parse(jsonData.responseText);
+  for (key in jdata.response) {
+	var jtr = key
+	var jzr = `${jtr}`
+    var jtr = `<table id="TableWithRules" width="100%" cellspacing="0" cellpadding="0" border="0"><th style="padding:3px" valign="top">Description</th></tr></thead>
+									  <tbody>
+<tr><td valign="top" nowrap="nowrap"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-${jtr}">${jtr}</a></td><td valign="top">${jdata["response"][jzr]["basic"]["description"]}</td></tr>
+									  </tbody></table>
+`;
+    document.querySelector('#popupmodaltable').insertAdjacentHTML('beforeend', jtr);
+}
 });
+  window.resizeTo(screen.width,screen.height)
 
 fuction loadCVE() { 
 	console.log('its working');
 }
+});
+
+
