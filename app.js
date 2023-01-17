@@ -76,7 +76,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"function loadCVE"+[i+1]+" () {"
 									  +"document.getElementById('loadjson"+[i+1]+"').addEventListener('click', function(e) {"
 +"e.preventDefault();"
-+"var label = document.getElementById('cve-input"+[i+1]+"').getAttribute('value');
++"var label = document.getElementById('cve-input"+[i+1]+"').getAttribute('value');"
 +"var jsonData = new XMLHttpRequest();"
 +"jsonData.open(\"GET\", \"https://api.cvesearch.com/search?q=\"+label, false);"
 +"jsonData.send(null);"
