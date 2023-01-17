@@ -72,7 +72,7 @@ d3.csv("vuldb.csv").then(function (data) {
 									  +"<button class='btn btn-primary' id='loadjson"+[i+1]+"' onclick='loadCVE"+[i+1]+"(this)'>Load CVE</button>"+"<br>"
 									  +"<div id='popupmodaltable"+[i+1]+"'>"
 									  +"</div>"
-									  +"<script>"
+									  +"<script type=\"text/javascript\">"
 									  +"function loadCVE"+[i+1]+"() {"
 									  +"console.log(this)"
 									  +"var label = document.getElementById('cve-input"+[i+1]+"').getAttribute('value');"
