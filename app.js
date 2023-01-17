@@ -95,6 +95,7 @@ d3.csv("vuldb.csv").then(function (data) {
     var jtr = `<tr><td valign="top" nowrap="nowrap"><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-${jtr}">${jtr}</a></td><td valign="top">${jdata["response"][jzr]["basic"]["description"]}</td></tr>`;
     document.querySelector('#TableWithRules tbody').insertAdjacentHTML('beforeend', jtr);
 }
+	    }
     }  };
   window.resizeTo(screen.width,screen.height)
 
