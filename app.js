@@ -29,7 +29,7 @@ d3.csv("vuldb.csv").then(function (data) {
       d3.select("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
     }
     output = _.sortBy(filteredData, 'vulnerability')
-
+ 
     for (var i = 0; i < filteredData.length; i++) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
