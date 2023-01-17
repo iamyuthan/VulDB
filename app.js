@@ -71,7 +71,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"
 									  +"<div class=\"smaller\" style=\"background-color:#e0dbd2; padding:3px; border:1px solid #706c60; margin-bottom:10px\">There are "
-									  +"<b>${jdata["meta"]["count"]}</b> CVE Records that match your search.</div>"
+									  +"<b>"+${jdata["meta"]["count"]}+"</b> CVE Records that match your search.</div>"
 									  +"<div><table id=\"TableWithRules\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">"
 									  +"<thead><tr><th style=\"padding:3px\" valign=\"top\">Name</th>"
 									  +"<th style=\"padding:3px\" valign=\"top\">Description</th></tr></thead>"
