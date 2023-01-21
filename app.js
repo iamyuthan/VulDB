@@ -90,7 +90,7 @@ d3.csv("vuldb.csv").then(function (data) {
 +"  var jdata = JSON.parse(jsonData.responseText);"
 										    +"var count = Object.keys(jdata).length;"
 										    +"if (jdata.length < 135){"
-										    +"jdata = \"timed out\""
+										    +"jdata = \"timed out\";"
 										    +"    var jtrout = `<table id=\"TableWithRules\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\"><thead><tr><th style=\"padding:3px\" valign=\"top\">Name</th><th style=\"padding:3px\" valign=\"top\">Description</th></tr></thead><tbody>"
 +"<tr><td valign=\"top\" nowrap=\"nowrap\">CVE search timed out. Please try again.</td></tr></tbody></table>`;"
 +"    document.querySelector('#popupmodaltable"+[i+1]+"').innerHTML = jtrout;"
