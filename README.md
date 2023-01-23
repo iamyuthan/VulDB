@@ -9,3 +9,7 @@ Have any suggestions? Please don't hesitate, you're most welcome to collab in th
 
 > Note: All new entries/updates will be monitored and reviewed before going live as it is used by the pentesters on ground.
 
+### VulDB Web Page
+
+[Yuthan Vulnerability Database!](https://iamyuthan.github.io/VulDB/)
+
