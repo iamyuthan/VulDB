@@ -81,6 +81,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"</div>"
 	      +"</div>"									  
 	    );
+	    
 	    d3.select("body").append("script").attr("type", "text/javascript").html("function loadCVE"+[i+1]+"() {"
 									  +"console.log(this);"
 									  +"var label = document.getElementById('cve-input"+[i+1]+"').value;"
