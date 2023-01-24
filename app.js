@@ -69,7 +69,7 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"<p><em><u><strong>Database:</strong></u></em>"+"<br>"+(output[i]['database'])+"</p>"
 	      +"<p><em><u><strong>Source:</strong></u></em>"+"<br>"+(output[i]['source'])+"</p>"+"<br>"
 									  +"<input autocomplete='off' type='text' class='form-control' id='cve-input"+[i+1]+"' placeholder='Enter vulnerability for finding CVE' value='"+(output[i]['vulnerability'])+"'>"
-									  +"<button class='btn btn-primary' id='loadjson"+[i+1]+"'>Load CVE</button>"+"<br>"+"<br>"
+									   +"<button class='btn btn-primary' id='loadjson"+[i+1]+"' onclick='loadCVE"+[i+1]+"(this)'>Load CVE</button>"+"<br>"+"<br>"
 									  +"<div id='popupmodaltable"+[i+1]+"'>"
 									  +"</div>"
 									  
@@ -79,9 +79,8 @@ d3.csv("vuldb.csv").then(function (data) {
 	      +"</div>"
 	      +"</div>"
 	      +"</div>"
-	      +"</div>"		
+	      +"</div>"									  
 	    );
-	    
 	    d3.select("body").append("script").attr("type", "text/javascript").html("function loadCVE"+[i+1]+"() {"
 									  +"console.log(this);"
 									  +"var label = document.getElementById('cve-input"+[i+1]+"').value;"
@@ -110,9 +109,7 @@ d3.csv("vuldb.csv").then(function (data) {
 +"}}")
 	    
   }  };
-=======
-	    );	    
-	 
+	 
   window.resizeTo(screen.width,screen.height)
 
 });
